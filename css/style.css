@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5e4ee;
+}
+
+.container {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-circles {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1em;
+    color: #747474;
+}
+
+.container-circles::before {
+    width: 100%;
+    height: 5px;
+    content: '';
+    transform: translateY(-50%);
+    background-color: #bebec0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+}
+
+.progress {
+    width: 0%;
+    height: 5px;
+    background-color: #8982ee;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transition: 0.5s ease;
+    z-index: -1;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e7e6e6;
+    border: 3px solid #bebec0;
+    border-radius: 50%;
+    transition: 0.5s ease;
+}
+
+.circle.active {
+    border: 3px solid #8982ee;   
+}
+
+.container-buttons {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 1em;
+}
+
+.btn {
+    color: #fff;
+    background-color: #8982ee;
+    padding: .5em 1em;
+    border-radius: 5px;
+    border: 2px solid #7a72e7;
+    box-shadow: -5px 7px 3px 0 #a5a5a585;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #857eeb;
+    border: 2px solid #776feb;
+}
+
+.btn:active {
+    background-color: #7c74ec;
+    border: 2px solid #6d65e7;
+}
+
+.btn:disabled {
+    background-color: #bebec0;
+    border: 2px solid #a0a0a1;
+}
+
+@media screen and (max-width: 1420px) {
+    .container-circles {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container-circles {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 545px) {
+    .container {
+        width: 80%;
+    }
+}
