@@ -90,6 +90,7 @@ body {
 .btn {
     color: #fff;
     background-color: #8982ee;
+    width: 100px;
     padding: .5em 1em;
     border-radius: 5px;
     border: 2px solid #7a72e7;
@@ -110,10 +111,15 @@ body {
 .btn:disabled {
     background-color: #bebec0;
     border: 2px solid #a0a0a1;
+    cursor:not-allowed;
 }
 
 @media screen and (max-width: 1420px) {
     .container-circles {
+        width: 80%;
+    }
+
+    .container-buttons {
         width: 80%;
     }
 }
